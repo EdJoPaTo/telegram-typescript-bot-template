@@ -1,0 +1,12 @@
+.*
+*.md
+**/*.test.*
+botfather-settings
+dist
+Dockerfile
+node_modules
+test
+
+# botfiles
+bot-token.txt
+persist

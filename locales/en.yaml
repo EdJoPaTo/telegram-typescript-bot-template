@@ -1,0 +1,16 @@
+welcome: >
+  Hey ${from.first_name}!
+
+  Writing translations for your bot is relativly easy once you know how to write propper yaml files.
+help: This is some example help text.
+menu:
+  back: back…
+  main: main…
+  settings: Settings
+  language: Language
+settings:
+  body: >
+    Feel free to set the settings you prefer.
+    Or as the developer:
+    Feel free to add the things you want users to adjust.
+  language: Select your language
