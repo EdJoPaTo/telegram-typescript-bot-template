@@ -1,9 +1,10 @@
 import {existsSync, readFileSync} from 'fs';
 
 import {MenuMiddleware} from 'telegraf-inline-menu';
-import {Telegraf, session} from 'telegraf';
+import {Telegraf} from 'telegraf';
 // TODO: Something about telegraf-i18n is typed wrong. It requires esModuleInterop to work…
 import TelegrafI18n from 'telegraf-i18n';
+import TelegrafSessionLocal from 'telegraf-session-local';
 
 import {fightDragons, danceWithFairies} from '../magic';
 
@@ -14,8 +15,11 @@ const tokenFilePath = existsSync('/run/secrets') ? '/run/secrets/bot-token.txt' 
 const token = readFileSync(tokenFilePath, 'utf8').trim();
 const bot = new Telegraf<MyContext>(token);
 
-// TODO: Wait for telegraf-session-local to have typescript typings. See https://github.com/RealSpeaker/telegraf-session-local/pull/59
-bot.use(session());
+const localSession = new TelegrafSessionLocal({
+	database: 'persist/sessions.json'
+});
+
+bot.use(localSession.middleware());
 
 const i18n = new TelegrafI18n({
 	directory: 'locales',
