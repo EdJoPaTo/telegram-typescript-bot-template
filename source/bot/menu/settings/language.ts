@@ -11,6 +11,7 @@ menu.select('lang', ['en', 'de'], {
 	isSet: (context, key) => context.i18n.locale() === key,
 	set: (context, key) => {
 		context.i18n.locale(key);
+		return true;
 	}
 });
 
