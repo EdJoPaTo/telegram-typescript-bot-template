@@ -1,7 +1,5 @@
 # telegram-typescript-bot-template
 
-[![NPM Version](https://img.shields.io/npm/v/telegram-typescript-bot-template.svg)](https://www.npmjs.com/package/telegram-typescript-bot-template)
-[![node](https://img.shields.io/node/v/telegram-typescript-bot-template.svg)](https://www.npmjs.com/package/telegram-typescript-bot-template)
 [![Build Status](https://travis-ci.com/<%= githubUsername %>/telegram-typescript-bot-template.svg?branch=master)](https://travis-ci.com/<%= githubUsername %>/telegram-typescript-bot-template)
 [![Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template)
 [![Dev Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/dev-status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template?type=dev)
