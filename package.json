@@ -35,8 +35,8 @@
 		"ava": "^3.0.0",
 		"del-cli": "^3.0.0",
 		"nyc": "^15.0.0",
-		"typescript": "^3.7.4",
-		"xo": "^0.32.0"
+		"typescript": "^4.0.2",
+		"xo": "^0.33.1"
 	},
 	"files": [
 		"dist/source",
