@@ -28,6 +28,15 @@ Write to the @BotFather on Telegram and create your bot.
 You will get a token that looks like this: `123:abc`.
 Create a file `bot-token.txt` and put it in there.
 
+The bot stores persistent data within the `persist` folder.
+So also create this folder before starting it the first time.
+
+```sh
+$ mkdir persist
+```
+
+Then go ahead and start the bot
+
 ```sh
 $ npm start
 ```
@@ -41,6 +50,9 @@ Take a look about information about it elsewhere.
 
 The container is meant to be used with a secret containing your bot token: `/run/secrets/bot-token.txt`
 
+The container has one volume (`/app/persist`) which will contain persistent data your bot creates.
+Make sure to explicitly use that volume (for example make sure its synced or pinned to a host in a multi node setup).
+
 ## Basic Folder structure
 
 - `source` contains your TypeScript source files. Subfolders contain specifics about your implementation
@@ -50,6 +62,7 @@ The container is meant to be used with a secret containing your bot token: `/run
 - `test` contains test files
 - `locales` contains the translations of your bot. That way it can speak multiple languages.
 - `dist` will contain the transpiled JavaScript files.
+- `persist` will contain persistent data your bot uses. Make sure to keep that data persistent (Backups for example).
 
 ## Improve
 
