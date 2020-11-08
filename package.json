@@ -23,9 +23,9 @@
 		"node": ">=14"
 	},
 	"dependencies": {
+		"@edjopato/telegraf-i18n": "^0.1.0",
 		"source-map-support": "^0.5.19",
 		"telegraf": "^3.38.0",
-		"telegraf-i18n": "^6.6.0",
 		"telegraf-inline-menu": "^5.0.0",
 		"telegraf-session-local": "^2.0.0"
 	},
