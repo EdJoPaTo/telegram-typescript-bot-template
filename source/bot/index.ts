@@ -3,7 +3,7 @@ import {existsSync, readFileSync} from 'fs';
 import {I18n as TelegrafI18n} from '@edjopato/telegraf-i18n';
 import {MenuMiddleware} from 'telegraf-inline-menu';
 import {Telegraf} from 'telegraf';
-import TelegrafSessionLocal from 'telegraf-session-local';
+import * as TelegrafSessionLocal from 'telegraf-session-local';
 
 import {fightDragons, danceWithFairies} from '../magic';
 
