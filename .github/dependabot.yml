@@ -9,8 +9,5 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
-    # Maybe interesting to not have as many changes to the package.json?
-    #versioning-strategy: increase-if-necessary
     commit-message:
-      # Prefix all commit messages with "npm"
       prefix: "chore(npm):"
