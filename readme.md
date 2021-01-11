@@ -1,6 +1,5 @@
 # telegram-typescript-bot-template
 
-[![Build Status](https://travis-ci.com/<%= githubUsername %>/telegram-typescript-bot-template.svg?branch=master)](https://travis-ci.com/<%= githubUsername %>/telegram-typescript-bot-template)
 [![Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template)
 [![Dev Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/dev-status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template?type=dev)
 
