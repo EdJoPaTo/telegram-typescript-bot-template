@@ -47,7 +47,8 @@ You can build a container from that.
 But this repo isnt about containers.
 Take a look about information about it elsewhere.
 
-The container is meant to be used with a secret containing your bot token: `/run/secrets/bot-token.txt`
+The container is meant to be used with a secret containing your bot token: `/run/secrets/bot-token.txt`.
+Alternativly you can supply it via an environment variable named `BOT_TOKEN`.
 
 The container has one volume (`/app/persist`) which will contain persistent data your bot creates.
 Make sure to explicitly use that volume (for example make sure its synced or pinned to a host in a multi node setup).
