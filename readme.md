@@ -45,7 +45,7 @@ $ npm start
 See the Dockerfile.
 You can build a container from that.
 But this repo isnt about containers.
-Take a look about information about it elsewhere.
+For information about it take a look elsewhere.
 
 The container is meant to be used with a secret containing your bot token: `/run/secrets/bot-token.txt`.
 Alternativly you can supply it via an environment variable named `BOT_TOKEN`.
