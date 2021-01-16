@@ -6,6 +6,6 @@ export interface Session {
 }
 
 export interface MyContext extends TelegrafContext {
-	i18n: I18nContext;
+	readonly i18n: I18nContext;
 	session: Session;
 }
