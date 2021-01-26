@@ -53,9 +53,7 @@ bot.command('start', async context => menuMiddleware.replyToContext(context));
 bot.command('settings', async context => menuMiddleware.replyToContext(context, '/settings/'));
 bot.use(menuMiddleware.middleware());
 
-// TODO: wait for release of telegraf 3.39. Then the bot.catch is properly typed in TypeScript
-// Merged but not released yet: https://github.com/telegraf/telegraf/pull/1015
-bot.catch((error: any) => {
+bot.catch(error => {
 	console.error('telegraf error occured', error);
 });
 
@@ -69,5 +67,5 @@ export async function start(): Promise<void> {
 	]);
 
 	await bot.launch();
-	console.log(new Date(), 'Bot started as', bot.options.username);
+	console.log(new Date(), 'Bot started as', bot.botInfo?.username);
 }
