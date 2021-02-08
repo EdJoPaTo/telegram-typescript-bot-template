@@ -1,4 +1,4 @@
-FROM docker.io/library/node:14-alpine
+FROM docker.io/library/node:14-alpine AS builder
 WORKDIR /build
 
 COPY package.json package-lock.json tsconfig.json ./
@@ -17,8 +17,8 @@ VOLUME /app/persist
 
 ENV NODE_ENV=production
 
-COPY --from=0 /build/node_modules ./node_modules
+COPY --from=builder /build/node_modules ./node_modules
 COPY locales locales
-COPY --from=0 /build/dist ./
+COPY --from=builder /build/dist ./
 
 CMD node --unhandled-rejections=strict -r source-map-support/register index.js
