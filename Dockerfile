@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM docker.io/library/node:14-alpine
 WORKDIR /build
 
 COPY package.json package-lock.json tsconfig.json ./
@@ -11,7 +11,7 @@ RUN rm -rf node_modules && \
   npm ci --production
 
 
-FROM node:14-alpine
+FROM docker.io/library/node:14-alpine
 WORKDIR /app
 VOLUME /app/persist
 
