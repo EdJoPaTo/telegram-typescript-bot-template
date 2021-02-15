@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Telegram Typescript Bot Template
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/node --unhandled-rejections=strict -r source-map-support/register dist/source/index.js
+WorkingDirectory=/home/pi/git/telegram-typescript-bot-template/
+User=pi
+Group=pi
+
+[Install]
+RequiredBy=multi-user.target
