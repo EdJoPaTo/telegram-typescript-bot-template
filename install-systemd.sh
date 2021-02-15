@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-nice npm ci --production
+nice npm ci
 nice npm run build
 
 echo
