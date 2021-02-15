@@ -1,7 +1,7 @@
 # telegram-typescript-bot-template
 
-[![Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template)
-[![Dev Dependency Status](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template/dev-status.svg)](https://david-dm.org/<%= githubUsername %>/telegram-typescript-bot-template?type=dev)
+[![Dependency Status](https://david-dm.org/<%= githubUsername %>/<%= githubReponame %>/status.svg)](https://david-dm.org/<%= githubUsername %>/<%= githubReponame %>)
+[![Dev Dependency Status](https://david-dm.org/<%= githubUsername %>/<%= githubReponame %>/dev-status.svg)](https://david-dm.org/<%= githubUsername %>/<%= githubReponame %>?type=dev)
 
 > Template for Telegram bots written in TypeScript
 

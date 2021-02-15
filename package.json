@@ -1,18 +1,6 @@
 {
-	"name": "telegram-typescript-bot-template",
 	"private": true,
-	"version": "0.0.0",
-	"description": "",
-	"keywords": [
-		""
-	],
 	"license": "MIT",
-	"repository": "<%= githubUsername %>/telegram-typescript-bot-template",
-	"author": {
-		"name": "<%= name %>",
-		"email": "<%= email %>",
-		"url": "<%= website %>"
-	},
 	"scripts": {
 		"build": "del-cli dist && tsc",
 		"prepack": "npm run build",
@@ -38,12 +26,6 @@
 		"typescript": "^4.1.2",
 		"xo": "^0.37.1"
 	},
-	"files": [
-		"dist/source",
-		"!*.test.*"
-	],
-	"main": "dist/source",
-	"types": "dist/source",
 	"nyc": {
 		"all": true,
 		"extension": [
