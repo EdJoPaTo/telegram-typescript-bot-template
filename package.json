@@ -1,9 +1,9 @@
 {
 	"private": true,
+	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
 		"build": "del-cli dist && tsc",
-		"prepack": "npm run build",
 		"start": "tsc --sourceMap && node --unhandled-rejections=strict -r source-map-support/register dist/source/index.js",
 		"test": "tsc --sourceMap && xo && nyc ava"
 	},
