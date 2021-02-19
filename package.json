@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "del-cli dist && tsc",
-		"start": "tsc --sourceMap && node --unhandled-rejections=strict -r source-map-support/register dist/source/index.js",
+		"start": "ts-node source/index.ts",
 		"test": "tsc --sourceMap && xo && nyc ava"
 	},
 	"engines": {
@@ -23,6 +23,7 @@
 		"ava": "^3.0.0",
 		"del-cli": "^3.0.0",
 		"nyc": "^15.0.0",
+		"ts-node": "^9.1.1",
 		"typescript": "^4.1.2",
 		"xo": "^0.37.1"
 	},
