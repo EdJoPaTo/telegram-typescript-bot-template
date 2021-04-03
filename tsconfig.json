@@ -5,9 +5,9 @@
 		"test"
 	],
 	"compilerOptions": {
+		"esModuleInterop": true,
 		"declaration": false,
 		"sourceMap": true,
-		"module": "CommonJS",
 		"outDir": "dist"
 	}
 }

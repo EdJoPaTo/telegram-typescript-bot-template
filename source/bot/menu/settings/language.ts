@@ -1,9 +1,9 @@
 import {MenuTemplate} from 'telegraf-inline-menu';
 import {I18n} from '@edjopato/telegraf-i18n';
 
-import {MyContext} from '../../my-context';
+import {MyContext} from '../../my-context.js';
 
-import {backButtons} from '../general';
+import {backButtons} from '../general.js';
 
 const availableLocales = new I18n({directory: 'locales'}).availableLocales();
 

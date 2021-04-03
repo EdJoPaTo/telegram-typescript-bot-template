@@ -4,12 +4,12 @@ import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {I18n as TelegrafI18n} from '@edjopato/telegraf-i18n';
 import {MenuMiddleware} from 'telegraf-inline-menu';
 import {Telegraf} from 'telegraf';
-import * as TelegrafSessionLocal from 'telegraf-session-local';
+import TelegrafSessionLocal from 'telegraf-session-local';
 
-import {fightDragons, danceWithFairies} from '../magic';
+import {fightDragons, danceWithFairies} from '../magic/index.js';
 
-import {MyContext} from './my-context';
-import {menu} from './menu';
+import {MyContext} from './my-context.js';
+import {menu} from './menu/index.js';
 
 const token = (existsSync('/run/secrets/bot-token.txt') && readFileSync('/run/secrets/bot-token.txt', 'utf8').trim()) ||
 	(existsSync('bot-token.txt') && readFileSync('bot-token.txt', 'utf8').trim()) ||
