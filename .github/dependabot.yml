@@ -5,7 +5,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 30
     schedule:
       # When these pull requests are annoying long term switch from "weekly" to "monthly".
       # Less often but still automated checks.
