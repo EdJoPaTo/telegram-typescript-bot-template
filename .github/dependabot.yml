@@ -10,6 +10,7 @@ updates:
       # When these pull requests are annoying long term switch from "weekly" to "monthly".
       # Less often but still automated checks.
       interval: "weekly"
+      time: "03:37" # UTC
     versioning-strategy: increase-if-necessary
     commit-message:
       prefix: "chore(npm):"
