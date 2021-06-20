@@ -3,6 +3,7 @@ name: Build container
 on:
   push:
   pull_request:
+  # Build regularly in order to have up to date base images in the edge image
   schedule:
     - cron:  '17 2 * * 3' # weekly Wednesday 02:17 UTC
 
@@ -18,7 +19,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            docker.io/<user>/<name>
+            docker.io/edjopato/telegram-typescript-bot-template
             ghcr.io/${{ github.repository }}
           tags: |
             type=edge
