@@ -1,10 +1,13 @@
 .*
 *.md
+*.service
+*.timer
 **/*.test.*
 botfather-settings
 coverage
 dist
 Dockerfile
+install-systemd.sh
 node_modules
 test
 
