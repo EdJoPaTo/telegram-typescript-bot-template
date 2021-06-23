@@ -13,7 +13,7 @@ updates:
       time: "03:37" # UTC
     versioning-strategy: increase-if-necessary
     commit-message:
-      prefix: "chore(npm):"
+      prefix: "build(npm):"
 
   - package-ecosystem: "github-actions"
     directory: "/"
