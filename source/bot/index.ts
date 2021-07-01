@@ -1,5 +1,3 @@
-import {existsSync, readFileSync} from 'fs';
-
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {I18n as TelegrafI18n} from '@edjopato/telegraf-i18n';
 import {MenuMiddleware} from 'telegraf-inline-menu';
@@ -11,11 +9,9 @@ import {fightDragons, danceWithFairies} from '../magic/index.js';
 import {MyContext} from './my-context.js';
 import {menu} from './menu/index.js';
 
-const token = (existsSync('/run/secrets/bot-token.txt') && readFileSync('/run/secrets/bot-token.txt', 'utf8').trim()) ||
-	(existsSync('bot-token.txt') && readFileSync('bot-token.txt', 'utf8').trim()) ||
-	process.env['BOT_TOKEN'];
+const token = process.env['BOT_TOKEN'];
 if (!token) {
-	throw new Error('You have to provide the bot-token from @BotFather via file (bot-token.txt) or environment variable (BOT_TOKEN)');
+	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
 }
 
 const bot = new Telegraf<MyContext>(token);
