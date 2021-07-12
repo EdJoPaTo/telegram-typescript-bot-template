@@ -14,7 +14,7 @@ menu.select('lang', availableLocales, {
 	set: (context, key) => {
 		context.i18n.locale(key);
 		return true;
-	}
+	},
 });
 
 menu.manualRow(backButtons);

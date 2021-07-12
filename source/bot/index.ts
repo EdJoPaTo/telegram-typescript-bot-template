@@ -17,7 +17,7 @@ if (!token) {
 const bot = new Telegraf<MyContext>(token);
 
 const localSession = new TelegrafSessionLocal({
-	database: 'persist/sessions.json'
+	database: 'persist/sessions.json',
 });
 
 bot.use(localSession.middleware());
@@ -26,7 +26,7 @@ const i18n = new TelegrafI18n({
 	directory: 'locales',
 	defaultLanguage: 'en',
 	defaultLanguageOnMissing: true,
-	useSession: true
+	useSession: true,
 });
 
 bot.use(i18n.middleware());
@@ -65,7 +65,7 @@ export async function start(): Promise<void> {
 		{command: 'start', description: 'open the menu'},
 		{command: 'magic', description: 'do magic'},
 		{command: 'help', description: 'show the help'},
-		{command: 'settings', description: 'open the settings'}
+		{command: 'settings', description: 'open the settings'},
 	]);
 
 	await bot.launch();

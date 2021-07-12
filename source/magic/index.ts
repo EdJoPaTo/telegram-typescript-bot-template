@@ -17,7 +17,7 @@ export function danceWithFairies(): string {
 		'No one else can see the fairies but you.',
 		'People think you are crazy.',
 		'But that is ok.',
-		'Everyone is.'
+		'Everyone is.',
 	];
 
 	return thoughtsWhileDancing.join('\n');
