@@ -15,12 +15,11 @@ RUN npm ci --production
 
 
 FROM docker.io/library/node:14-alpine
+ENV NODE_ENV=production
+RUN apk upgrade --no-cache
+
 WORKDIR /app
 VOLUME /app/persist
-
-ENV NODE_ENV=production
-
-RUN apk upgrade --no-cache
 
 COPY package.json ./
 COPY --from=packages /build/node_modules ./node_modules
