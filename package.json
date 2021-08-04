@@ -26,11 +26,12 @@
 		"del-cli": "^4.0.0",
 		"ts-node": "^10.0.0",
 		"typescript": "^4.2.3",
-		"xo": "^0.42.0"
+		"xo": "^0.43.0"
 	},
 	"xo": {
 		"rules": {
 			"ava/no-ignored-test-files": "off",
+			"node/prefer-global/process": "off",
 			"unicorn/prefer-node-protocol": "off",
 			"import/extensions": [
 				"error",
