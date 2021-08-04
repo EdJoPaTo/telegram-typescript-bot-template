@@ -1,5 +1,5 @@
 import {Context as TelegrafContext} from 'telegraf';
-import {I18nContext} from '@edjopato/telegraf-i18n';
+import {I18nContext} from '@grammyjs/i18n';
 
 export interface Session {
 	page?: number;

@@ -1,5 +1,5 @@
 import {MenuTemplate} from 'telegraf-inline-menu';
-import {I18n} from '@edjopato/telegraf-i18n';
+import {I18n} from '@grammyjs/i18n';
 
 import {MyContext} from '../../my-context.js';
 

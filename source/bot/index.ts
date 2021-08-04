@@ -1,5 +1,5 @@
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
-import {I18n as TelegrafI18n} from '@edjopato/telegraf-i18n';
+import {I18n} from '@grammyjs/i18n';
 import {MenuMiddleware} from 'telegraf-inline-menu';
 import {Telegraf} from 'telegraf';
 import TelegrafSessionLocal from 'telegraf-session-local';
@@ -22,7 +22,7 @@ const localSession = new TelegrafSessionLocal({
 
 bot.use(localSession.middleware());
 
-const i18n = new TelegrafI18n({
+const i18n = new I18n({
 	directory: 'locales',
 	defaultLanguage: 'en',
 	defaultLanguageOnMissing: true,
