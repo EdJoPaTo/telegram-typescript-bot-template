@@ -26,10 +26,11 @@
 		"del-cli": "^4.0.0",
 		"ts-node": "^10.0.0",
 		"typescript": "^4.2.3",
-		"xo": "^0.44.0"
+		"xo": "^0.45.0"
 	},
 	"xo": {
 		"rules": {
+			"@typescript-eslint/naming-convention": "off",
 			"ava/no-ignored-test-files": "off",
 			"node/prefer-global/process": "off",
 			"unicorn/prefer-node-protocol": "off",
