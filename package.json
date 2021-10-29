@@ -9,7 +9,7 @@
 	},
 	"type": "module",
 	"engines": {
-		"node": ">=14"
+		"node": ">=16"
 	},
 	"dependencies": {
 		"@grammyjs/i18n": "^0.3.0",
@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^2.0.0",
-		"@types/node": "^14.17.9",
+		"@types/node": "^16.11.6",
 		"ava": "^3.0.0",
 		"del-cli": "^4.0.0",
 		"ts-node": "^10.0.0",

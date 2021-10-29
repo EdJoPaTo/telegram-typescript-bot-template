@@ -1,4 +1,4 @@
-FROM docker.io/library/node:14-alpine AS builder
+FROM docker.io/library/node:16-alpine AS builder
 WORKDIR /build
 
 COPY package.json package-lock.json tsconfig.json ./
@@ -8,13 +8,13 @@ COPY source source
 RUN node_modules/.bin/tsc
 
 
-FROM docker.io/library/node:14-alpine AS packages
+FROM docker.io/library/node:16-alpine AS packages
 WORKDIR /build
 COPY package.json package-lock.json ./
 RUN npm ci --production
 
 
-FROM docker.io/library/node:14-alpine
+FROM docker.io/library/node:16-alpine
 ENV NODE_ENV=production
 RUN apk upgrade --no-cache
 
@@ -26,4 +26,4 @@ COPY --from=packages /build/node_modules ./node_modules
 COPY locales locales
 COPY --from=builder /build/dist ./
 
-CMD node --unhandled-rejections=strict -r source-map-support/register index.js
+CMD node -r source-map-support/register index.js
