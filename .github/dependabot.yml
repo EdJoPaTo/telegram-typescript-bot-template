@@ -7,10 +7,9 @@ updates:
     directory: "/"
     open-pull-requests-limit: 30
     schedule:
-      # When these pull requests are annoying long term switch from "weekly" to "monthly".
-      # Less often but still automated checks.
       interval: "weekly"
-      time: "03:37" # UTC
+      day: "saturday"
+      time: "02:42" # UTC
     versioning-strategy: increase-if-necessary
     commit-message:
       prefix: "build(npm):"
@@ -22,5 +21,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "saturday"
+      time: "02:42" # UTC
     commit-message:
       prefix: "ci(actions):"
