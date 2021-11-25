@@ -6,4 +6,4 @@ node_modules
 yarn.lock
 
 # botfiles
-persist
+sessions

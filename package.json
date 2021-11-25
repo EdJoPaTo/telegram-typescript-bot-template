@@ -12,14 +12,15 @@
 		"node": ">=16"
 	},
 	"dependencies": {
-		"@grammyjs/i18n": "^0.3.0",
+		"@grammyjs/i18n": "^0.5.0",
+		"@satont/grammy-file-storage": "^1.1.1",
+		"grammy": "^1.4.2",
+		"grammy-inline-menu": "^7.0.2",
 		"source-map-support": "^0.5.19",
-		"telegraf": "^4.0.0",
-		"telegraf-inline-menu": "^6.0.0",
-		"telegraf-middleware-console-time": "^2.0.0",
-		"telegraf-session-local": "^2.0.0"
+		"telegraf-middleware-console-time": "^2.0.0"
 	},
 	"devDependencies": {
+		"@grammyjs/types": "^2.3.1",
 		"@sindresorhus/tsconfig": "^2.0.0",
 		"@types/node": "^16.11.6",
 		"ava": "^3.0.0",

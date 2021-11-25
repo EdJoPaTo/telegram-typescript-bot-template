@@ -1,12 +1,12 @@
+import {Bot, session} from 'grammy';
+import {FileAdapter} from '@satont/grammy-file-storage';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {I18n} from '@grammyjs/i18n';
-import {MenuMiddleware} from 'telegraf-inline-menu';
-import {Telegraf} from 'telegraf';
-import TelegrafSessionLocal from 'telegraf-session-local';
+import {MenuMiddleware} from 'grammy-inline-menu';
 
 import {fightDragons, danceWithFairies} from '../magic/index.js';
 
-import {MyContext} from './my-context.js';
+import {MyContext, Session} from './my-context.js';
 import {menu} from './menu/index.js';
 
 const token = process.env['BOT_TOKEN'];
@@ -14,13 +14,12 @@ if (!token) {
 	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
 }
 
-const bot = new Telegraf<MyContext>(token);
+const bot = new Bot<MyContext>(token);
 
-const localSession = new TelegrafSessionLocal({
-	database: 'persist/sessions.json',
-});
-
-bot.use(localSession.middleware());
+bot.use(session({
+	initial: (): Session => ({}),
+	storage: new FileAdapter(),
+}));
 
 const i18n = new I18n({
 	directory: 'locales',
@@ -61,13 +60,16 @@ bot.catch(error => {
 
 export async function start(): Promise<void> {
 	// The commands you set here will be shown as /commands like /start or /magic in your telegram client.
-	await bot.telegram.setMyCommands([
+	await bot.api.setMyCommands([
 		{command: 'start', description: 'open the menu'},
 		{command: 'magic', description: 'do magic'},
 		{command: 'help', description: 'show the help'},
 		{command: 'settings', description: 'open the settings'},
 	]);
 
-	await bot.launch();
-	console.log(new Date(), 'Bot started as', bot.botInfo?.username);
+	await bot.start({
+		onStart: botInfo => {
+			console.log(new Date(), 'Bot starts as', botInfo.username);
+		}
+	});
 }

@@ -1,4 +1,4 @@
-import {MenuTemplate} from 'telegraf-inline-menu';
+import {MenuTemplate} from 'grammy-inline-menu';
 
 import {backButtons} from '../general.js';
 import {MyContext} from '../../my-context.js';

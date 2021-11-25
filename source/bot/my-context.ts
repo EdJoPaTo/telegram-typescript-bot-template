@@ -1,11 +1,8 @@
-import {Context as TelegrafContext} from 'telegraf';
-import {I18nContext} from '@grammyjs/i18n';
+import {Context as BaseContext, SessionFlavor} from 'grammy';
+import {I18nContextFlavor} from '@grammyjs/i18n';
 
 export interface Session {
 	page?: number;
 }
 
-export interface MyContext extends TelegrafContext {
-	readonly i18n: I18nContext;
-	session: Session;
-}
+export type MyContext = BaseContext & SessionFlavor<Session> & I18nContextFlavor;
