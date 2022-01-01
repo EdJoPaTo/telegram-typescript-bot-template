@@ -26,4 +26,4 @@ cd -
 # macOS: add '' after -i like this: sed -i '' "s/…
 sed -i "s/telegram-typescript-bot-template/$name/g" package.json Dockerfile .github/**/*.yml install-systemd.sh ./*.service
 
-git --no-pager diff --stat
+git --no-pager status --short
