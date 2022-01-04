@@ -16,7 +16,6 @@
 		"@satont/grammy-file-storage": "^1.1.1",
 		"grammy": "^1.4.2",
 		"grammy-inline-menu": "^7.0.2",
-		"source-map-support": "^0.5.19",
 		"telegraf-middleware-console-time": "^2.0.0"
 	},
 	"devDependencies": {
