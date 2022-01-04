@@ -16,7 +16,6 @@ RUN npm ci --production
 
 FROM docker.io/library/node:16-alpine
 ENV NODE_ENV=production
-ENV NODE_OPTIONS=--enable-source-maps
 RUN apk upgrade --no-cache
 
 WORKDIR /app
@@ -27,4 +26,4 @@ COPY --from=packages /build/node_modules ./node_modules
 COPY locales locales
 COPY --from=builder /build/dist ./
 
-CMD node index.js
+CMD node --enable-source-maps index.js
