@@ -22,7 +22,7 @@
 		"@grammyjs/types": "^2.3.1",
 		"@sindresorhus/tsconfig": "^2.0.0",
 		"@types/node": "^16.11.6",
-		"ava": "^3.0.0",
+		"ava": "^4.0.0",
 		"del-cli": "^4.0.0",
 		"ts-node": "^10.0.0",
 		"typescript": "^4.2.3",
