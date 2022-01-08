@@ -1,8 +1,5 @@
 # telegram-typescript-bot-template
 
-[![dependencies Status](https://status.david-dm.org/gh/EdJoPaTo/telegram-typescript-bot-template.svg)](https://david-dm.org/EdJoPaTo/telegram-typescript-bot-template)
-[![devDependencies Status](https://status.david-dm.org/gh/EdJoPaTo/telegram-typescript-bot-template.svg?type=dev)](https://david-dm.org/EdJoPaTo/telegram-typescript-bot-template?type=dev)
-
 > Template for Telegram bots written in TypeScript
 
 If you haven't written TypeScript before, don't be scared of it.
