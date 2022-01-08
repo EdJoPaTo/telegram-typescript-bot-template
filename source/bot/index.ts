@@ -55,7 +55,7 @@ bot.command('settings', async context => menuMiddleware.replyToContext(context, 
 bot.use(menuMiddleware.middleware());
 
 bot.catch(error => {
-	console.error('telegraf error occured', error);
+	console.error('ERROR on handling update occured', error);
 });
 
 export async function start(): Promise<void> {
