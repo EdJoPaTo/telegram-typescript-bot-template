@@ -1,7 +1,7 @@
 welcome: >
   Hey ${from.first_name}!
 
-  Writing translations for your bot is relativly easy once you know how to write propper yaml files.
+  Writing translations for your bot is relatively easy once you know how to write proper yaml files.
 help: This is some example help text.
 menu:
   back: back…
