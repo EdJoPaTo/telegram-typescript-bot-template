@@ -5,7 +5,7 @@ on:
   pull_request:
   # Build regularly in order to have up to date base images in the edge image
   schedule:
-    - cron:  '42 2 * * 0' # weekly on Sunday 2:42 UTC
+    - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
 
 jobs:
   docker:
