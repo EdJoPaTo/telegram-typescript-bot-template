@@ -16,7 +16,8 @@
 		"@satont/grammy-file-storage": "^1.1.1",
 		"grammy": "^1.4.2",
 		"grammy-inline-menu": "^7.0.2",
-		"telegraf-middleware-console-time": "^2.0.0"
+		"telegraf-middleware-console-time": "^2.0.0",
+		"telegram-format": "^2.1.0"
 	},
 	"devDependencies": {
 		"@grammyjs/types": "^2.3.1",

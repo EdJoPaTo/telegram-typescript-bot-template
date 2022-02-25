@@ -1,6 +1,7 @@
 import {Bot, session} from 'grammy';
 import {FileAdapter} from '@satont/grammy-file-storage';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
+import {html as format} from 'telegram-format';
 import {I18n} from '@grammyjs/i18n';
 import {MenuMiddleware} from 'grammy-inline-menu';
 
@@ -49,6 +50,14 @@ bot.command('magic', async context => {
 	return context.reply(text);
 });
 
+bot.command('html', async ctx => {
+	let text = '';
+	text += format.bold('Some');
+	text += ' ';
+	text += format.spoiler('HTML');
+	await ctx.reply(text, {parse_mode: format.parse_mode});
+});
+
 const menuMiddleware = new MenuMiddleware('/', menu);
 bot.command('start', async context => menuMiddleware.replyToContext(context));
 bot.command('settings', async context => menuMiddleware.replyToContext(context, '/settings/'));
@@ -63,6 +72,7 @@ export async function start(): Promise<void> {
 	await bot.api.setMyCommands([
 		{command: 'start', description: 'open the menu'},
 		{command: 'magic', description: 'do magic'},
+		{command: 'html', description: 'some html _mode example'},
 		{command: 'help', description: 'show the help'},
 		{command: 'settings', description: 'open the settings'},
 	]);
