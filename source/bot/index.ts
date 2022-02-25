@@ -68,7 +68,7 @@ export async function start(): Promise<void> {
 	]);
 
 	await bot.start({
-		onStart: botInfo => {
+		onStart(botInfo) {
 			console.log(new Date(), 'Bot starts as', botInfo.username);
 		},
 	});

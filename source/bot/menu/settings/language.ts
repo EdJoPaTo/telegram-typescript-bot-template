@@ -11,7 +11,7 @@ export const menu = new MenuTemplate<MyContext>(context => context.i18n.t('setti
 
 menu.select('lang', availableLocales, {
 	isSet: (context, key) => context.i18n.locale() === key,
-	set: (context, key) => {
+	set(context, key) {
 		context.i18n.locale(key);
 		return true;
 	},
