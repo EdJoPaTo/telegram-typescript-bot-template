@@ -12,7 +12,8 @@
 		"node": ">=16"
 	},
 	"dependencies": {
-		"@grammyjs/i18n": "^0.5.0",
+		"@grammyjs/fluent": "^1.0.3",
+		"@moebius/fluent": "^1.1.0",
 		"@satont/grammy-file-storage": "^1.1.1",
 		"grammy": "^1.4.2",
 		"grammy-inline-menu": "^7.0.2",

@@ -2,13 +2,13 @@ import {Bot, session} from 'grammy';
 import {FileAdapter} from '@satont/grammy-file-storage';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
-import {I18n} from '@grammyjs/i18n';
 import {MenuMiddleware} from 'grammy-inline-menu';
+import {useFluent} from '@grammyjs/fluent';
 
 import {fightDragons, danceWithFairies} from '../magic/index.js';
-
-import {MyContext, Session} from './my-context.js';
+import {fluent, loadLocales} from '../translation.js';
 import {menu} from './menu/index.js';
+import {MyContext, Session} from './my-context.js';
 
 const token = process.env['BOT_TOKEN'];
 if (!token) {
@@ -22,21 +22,18 @@ bot.use(session({
 	storage: new FileAdapter(),
 }));
 
-const i18n = new I18n({
-	directory: 'locales',
-	defaultLanguage: 'en',
-	defaultLanguageOnMissing: true,
-	useSession: true,
-});
-
-bot.use(i18n.middleware());
+bot.use(useFluent({
+	defaultLocale: 'en',
+	fluent,
+	localeNegotiator: ctx => ctx.session.language_code ?? ctx.from?.language_code ?? 'en',
+}));
 
 if (process.env['NODE_ENV'] !== 'production') {
 	// Show what telegram updates (messages, button clicks, ...) are happening (only in development)
 	bot.use(generateUpdateMiddleware());
 }
 
-bot.command('help', async ctx => ctx.reply(ctx.i18n.t('help')));
+bot.command('help', async ctx => ctx.reply(ctx.t('help')));
 
 bot.command('magic', async ctx => {
 	const combatResult = fightDragons();
@@ -68,6 +65,8 @@ bot.catch(error => {
 });
 
 export async function start(): Promise<void> {
+	await loadLocales();
+
 	// The commands you set here will be shown as /commands like /start or /magic in your telegram client.
 	await bot.api.setMyCommands([
 		{command: 'start', description: 'open the menu'},

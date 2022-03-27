@@ -1,8 +1,9 @@
 import {Context as BaseContext, SessionFlavor} from 'grammy';
-import {I18nContextFlavor} from '@grammyjs/i18n';
+import {FluentContextFlavor} from '@grammyjs/fluent';
 
 export interface Session {
+	language_code?: string;
 	page?: number;
 }
 
-export type MyContext = BaseContext & SessionFlavor<Session> & I18nContextFlavor;
+export type MyContext = BaseContext & SessionFlavor<Session> & FluentContextFlavor;
