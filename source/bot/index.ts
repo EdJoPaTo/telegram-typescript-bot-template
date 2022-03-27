@@ -36,9 +36,9 @@ if (process.env['NODE_ENV'] !== 'production') {
 	bot.use(generateUpdateMiddleware());
 }
 
-bot.command('help', async context => context.reply(context.i18n.t('help')));
+bot.command('help', async ctx => ctx.reply(ctx.i18n.t('help')));
 
-bot.command('magic', async context => {
+bot.command('magic', async ctx => {
 	const combatResult = fightDragons();
 	const fairyThoughts = danceWithFairies();
 
@@ -47,7 +47,7 @@ bot.command('magic', async context => {
 	text += '\n\n';
 	text += fairyThoughts;
 
-	return context.reply(text);
+	return ctx.reply(text);
 });
 
 bot.command('html', async ctx => {
@@ -59,8 +59,8 @@ bot.command('html', async ctx => {
 });
 
 const menuMiddleware = new MenuMiddleware('/', menu);
-bot.command('start', async context => menuMiddleware.replyToContext(context));
-bot.command('settings', async context => menuMiddleware.replyToContext(context, '/settings/'));
+bot.command('start', async ctx => menuMiddleware.replyToContext(ctx));
+bot.command('settings', async ctx => menuMiddleware.replyToContext(ctx, '/settings/'));
 bot.use(menuMiddleware.middleware());
 
 bot.catch(error => {
