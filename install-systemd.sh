@@ -10,7 +10,7 @@ echo Service will fail when some values are not filled out
 echo
 
 # systemd
-sudo cp -uv ./*.service /etc/systemd/system
+sudo cp -v ./*.service /etc/systemd/system
 sudo systemctl daemon-reload
 
 # start
