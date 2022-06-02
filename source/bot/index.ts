@@ -1,5 +1,5 @@
 import {Bot, session} from 'grammy';
-import {FileAdapter} from '@satont/grammy-file-storage';
+import {FileAdapter} from '@grammyjs/storage-file';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
 import {MenuMiddleware} from 'grammy-inline-menu';
