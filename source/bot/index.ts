@@ -5,7 +5,7 @@ import {html as format} from 'telegram-format';
 import {MenuMiddleware} from 'grammy-inline-menu';
 import {useFluent} from '@grammyjs/fluent';
 
-import {fightDragons, danceWithFairies} from '../magic/index.js';
+import {fightDragons, danceWithFairies} from '../magic.js';
 import {fluent, loadLocales} from '../translation.js';
 import {menu} from './menu/index.js';
 import {MyContext, Session} from './my-context.js';

@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "del-cli dist && tsc",
-		"start": "node --loader ts-node/esm source/index.ts",
+		"start": "tsc --sourceMap && node --enable-source-maps dist/index.js",
 		"test": "tsc --sourceMap && xo && ava"
 	},
 	"type": "module",
@@ -26,7 +26,6 @@
 		"@types/node": "^16.11.6",
 		"ava": "^4.0.0",
 		"del-cli": "^4.0.0",
-		"ts-node": "^10.0.0",
 		"typescript": "^4.2.3",
 		"xo": "^0.49.0"
 	},

@@ -3,6 +3,7 @@
 *.service
 *.timer
 **/*.test.*
+**/test.*
 botfather-settings
 coverage
 dist

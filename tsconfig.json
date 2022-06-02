@@ -1,8 +1,7 @@
 {
 	"extends": "@sindresorhus/tsconfig/tsconfig.json",
 	"include": [
-		"source",
-		"test"
+		"source"
 	],
 	"compilerOptions": {
 		"esModuleInterop": true,

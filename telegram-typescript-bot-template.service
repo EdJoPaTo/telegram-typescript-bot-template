@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
 Environment="NODE_ENV=production"
-ExecStart=/usr/bin/node --enable-source-maps dist/source/index.js
+ExecStart=/usr/bin/node --enable-source-maps dist/index.js
 WorkingDirectory=/home/pi/git/telegram-typescript-bot-template/
 User=pi
 Group=pi

@@ -1,4 +1,4 @@
-import {feedTheDragons} from './magic/index.js';
+import {feedTheDragons} from './magic.js';
 import {start as startBot} from './bot/index.js';
 
 feedTheDragons();

@@ -56,7 +56,6 @@ Make sure to explicitly use that volume (for example, make sure it's synced or t
   - `bot` may contain files relevant for the telegram bot
     - `menu` may contain specifics about the bot, the menu that is shown on /start
   - `magic` may contain something relevant for doing magic. It is not relevant to the bot directly but it is used by it.
-- `test` contains test files
 - `locales` contains translation strings for your bot. That way it can speak multiple languages.
 - `dist` will contain transpiled JavaScript files.
 - `persist` will contain persistent data your bot uses. Make sure to keep that data persistent (Backups for example).
