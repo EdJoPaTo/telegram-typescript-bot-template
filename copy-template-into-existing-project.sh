@@ -13,7 +13,7 @@ name=$(basename "$pwd")
 cd "$(dirname "$0")"
 
 cp -rv \
-    {package.json,tsconfig.json,.gitignore,.github,.dockerignore,Dockerfile,install-systemd.sh} \
+    {package.json,tsconfig.json,.gitignore,.github,.editorconfig,.dockerignore,Dockerfile,install-systemd.sh} \
     "$pwd"
 
 cp -rv telegram-typescript-bot-template.service "$pwd/$name.service"
