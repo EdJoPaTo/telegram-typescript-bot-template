@@ -26,14 +26,14 @@
 		"@types/node": "^16.11.6",
 		"ava": "^4.0.0",
 		"del-cli": "^4.0.0",
-		"typescript": "^4.2.3",
-		"xo": "^0.49.0"
+		"typescript": "^4.7.4",
+		"xo": "^0.50.0"
 	},
 	"xo": {
 		"rules": {
 			"@typescript-eslint/naming-convention": "off",
 			"ava/no-ignored-test-files": "off",
-			"node/prefer-global/process": "off"
+			"n/prefer-global/process": "off"
 		}
 	}
 }
