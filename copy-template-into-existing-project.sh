@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 # Usage
 # Go to the project you want to improve via this template
@@ -7,20 +7,16 @@ set -e
 # Run this script from the working directory of that project
 # ~/git/telegram-typescript-bot-template/copy-template-into-existing-project.sh
 
-pwd=$(pwd)
-name=$(basename "$pwd")
+name=$(basename "$PWD")
+templatedir="$(dirname "$0")"
 
-cd "$(dirname "$0")"
+cp -r \
+    "$templatedir/"{package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile,install-systemd.sh} \
+    .
 
-cp -rv \
-    {package.json,tsconfig.json,.gitignore,.github,.editorconfig,.dockerignore,Dockerfile,install-systemd.sh} \
-    "$pwd"
-
-cp -rv telegram-typescript-bot-template.service "$pwd/$name.service"
+cp "$templatedir/"telegram-typescript-bot-template.service "./$name.service"
 
 echo "everything copied"
-
-cd -
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
