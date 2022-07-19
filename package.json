@@ -3,7 +3,6 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"build": "del-cli dist && tsc",
 		"start": "tsc --sourceMap && node --enable-source-maps dist/index.js",
 		"test": "tsc --sourceMap && xo && ava"
 	},
@@ -25,7 +24,6 @@
 		"@sindresorhus/tsconfig": "^3.0.1",
 		"@types/node": "^16.11.6",
 		"ava": "^4.0.0",
-		"del-cli": "^4.0.0",
 		"typescript": "^4.7.4",
 		"xo": "^0.50.0"
 	},
