@@ -2,7 +2,8 @@
 set -e
 
 nice npm ci
-nice npm run build
+rm -rf dist
+nice ./node_modules/.bin/tsc
 
 echo
 echo WARNING
