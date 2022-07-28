@@ -1,3 +1,5 @@
+import * as process from 'node:process';
+
 import {Bot, session} from 'grammy';
 import {FileAdapter} from '@grammyjs/storage-file';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';

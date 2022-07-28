@@ -30,8 +30,7 @@
 	"xo": {
 		"rules": {
 			"@typescript-eslint/naming-convention": "off",
-			"ava/no-ignored-test-files": "off",
-			"n/prefer-global/process": "off"
+			"ava/no-ignored-test-files": "off"
 		}
 	}
 }
