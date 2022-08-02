@@ -14,13 +14,12 @@
 		"@grammyjs/fluent": "^1.0.3",
 		"@grammyjs/storage-file": "^2.0.0",
 		"@moebius/fluent": "^1.1.0",
-		"grammy": "^1.4.2",
+		"grammy": "^1.10.0",
 		"grammy-inline-menu": "^8.0.0",
 		"telegraf-middleware-console-time": "^2.0.0",
 		"telegram-format": "^2.1.0"
 	},
 	"devDependencies": {
-		"@grammyjs/types": "^2.3.1",
 		"@sindresorhus/tsconfig": "^3.0.1",
 		"@types/node": "^16.11.6",
 		"ava": "^4.0.0",
