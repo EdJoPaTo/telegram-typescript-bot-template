@@ -10,7 +10,7 @@ import {useFluent} from '@grammyjs/fluent';
 import {fightDragons, danceWithFairies} from '../magic.js';
 import {fluent, loadLocales} from '../translation.js';
 import {menu} from './menu/index.js';
-import {MyContext, Session} from './my-context.js';
+import type {MyContext, Session} from './my-context.js';
 
 const token = process.env['BOT_TOKEN'];
 if (!token) {

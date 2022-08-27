@@ -1,6 +1,6 @@
 import {MenuTemplate} from 'grammy-inline-menu';
 
-import {MyContext} from '../my-context.js';
+import type {MyContext} from '../my-context.js';
 
 import {menu as settingsMenu} from './settings/index.js';
 
