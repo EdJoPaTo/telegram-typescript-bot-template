@@ -6,7 +6,7 @@ import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
 import {MenuMiddleware} from 'grammy-inline-menu';
 
-import {fightDragons, danceWithFairies} from '../magic.js';
+import {danceWithFairies, fightDragons} from '../magic.js';
 import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
@@ -23,7 +23,7 @@ bot.use(session({
 	storage: new FileAdapter(),
 }));
 
-bot.use(i18n.middleware())
+bot.use(i18n.middleware());
 
 if (process.env['NODE_ENV'] !== 'production') {
 	// Show what telegram updates (messages, button clicks, ...) are happening (only in development)
