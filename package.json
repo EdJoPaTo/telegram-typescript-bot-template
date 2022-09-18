@@ -11,9 +11,8 @@
 		"node": ">=16"
 	},
 	"dependencies": {
-		"@grammyjs/fluent": "^1.0.3",
+		"@grammyjs/i18n": "^1.0.1",
 		"@grammyjs/storage-file": "^2.0.0",
-		"@moebius/fluent": "^1.1.0",
 		"grammy": "^1.10.0",
 		"grammy-inline-menu": "^8.0.0",
 		"telegraf-middleware-console-time": "^2.0.0",

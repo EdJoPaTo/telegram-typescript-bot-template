@@ -7,10 +7,9 @@ import type {MyContext} from '../../my-context.js';
 export const menu = new MenuTemplate<MyContext>(ctx => ctx.t('settings-language'));
 
 menu.select('lang', getAvailableLocales, {
-	isSet: (ctx, key) => (ctx.session.language_code ?? ctx.from?.language_code ?? 'en') === key,
+	isSet: async (ctx, key) => await ctx.i18n.getLocale() === key,
 	async set(ctx, key) {
-		ctx.session.language_code = key;
-		await ctx.fluent.renegotiateLocale();
+		await ctx.i18n.setLocale(key);
 		return true;
 	},
 });

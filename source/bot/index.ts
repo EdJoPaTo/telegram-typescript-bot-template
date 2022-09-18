@@ -5,10 +5,9 @@ import {FileAdapter} from '@grammyjs/storage-file';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
 import {MenuMiddleware} from 'grammy-inline-menu';
-import {useFluent} from '@grammyjs/fluent';
 
 import {fightDragons, danceWithFairies} from '../magic.js';
-import {fluent, loadLocales} from '../translation.js';
+import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
@@ -24,11 +23,7 @@ bot.use(session({
 	storage: new FileAdapter(),
 }));
 
-bot.use(useFluent({
-	defaultLocale: 'en',
-	fluent,
-	localeNegotiator: ctx => ctx.session.language_code ?? ctx.from?.language_code ?? 'en',
-}));
+bot.use(i18n.middleware())
 
 if (process.env['NODE_ENV'] !== 'production') {
 	// Show what telegram updates (messages, button clicks, ...) are happening (only in development)
@@ -67,8 +62,6 @@ bot.catch(error => {
 });
 
 export async function start(): Promise<void> {
-	await loadLocales();
-
 	// The commands you set here will be shown as /commands like /start or /magic in your telegram client.
 	await bot.api.setMyCommands([
 		{command: 'start', description: 'open the menu'},
