@@ -1,4 +1,5 @@
 import * as process from 'node:process';
+import { config as envconfig } from 'dotenv'; envconfig();
 
 import {Bot, session} from 'grammy';
 import {FileAdapter} from '@grammyjs/storage-file';
