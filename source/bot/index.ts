@@ -1,8 +1,7 @@
 import * as process from 'node:process';
 
-import {config as dotenv} from 'dotenv';
-
 import {Bot, session} from 'grammy';
+import {config as dotenv} from 'dotenv';
 import {FileAdapter} from '@grammyjs/storage-file';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
