@@ -1,5 +1,5 @@
 import * as process from 'node:process';
-import { config as envconfig } from 'dotenv'; envconfig();
+import {config as dotenv} from 'dotenv'; dotenv();
 
 import {Bot, session} from 'grammy';
 import {FileAdapter} from '@grammyjs/storage-file';
