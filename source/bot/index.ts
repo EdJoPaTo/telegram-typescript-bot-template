@@ -1,6 +1,7 @@
 import * as process from 'node:process';
 
 import {Bot, session} from 'grammy';
+import {config as dotenv} from 'dotenv';
 import {FileAdapter} from '@grammyjs/storage-file';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
@@ -11,6 +12,7 @@ import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
+dotenv(); // Load from .env file
 const token = process.env['BOT_TOKEN'];
 if (!token) {
 	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
