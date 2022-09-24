@@ -12,7 +12,7 @@ import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
-dotenv(); // Configure the .env file
+dotenv(); // Load from .env file
 const token = process.env['BOT_TOKEN'];
 if (!token) {
 	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
