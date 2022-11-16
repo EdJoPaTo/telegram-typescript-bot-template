@@ -59,6 +59,8 @@ bot.command('start', async ctx => menuMiddleware.replyToContext(ctx));
 bot.command('settings', async ctx => menuMiddleware.replyToContext(ctx, '/settings/'));
 bot.use(menuMiddleware.middleware());
 
+// False positive as bot is not a promise
+// eslint-disable-next-line unicorn/prefer-top-level-await
 bot.catch(error => {
 	console.error('ERROR on handling update occured', error);
 });
