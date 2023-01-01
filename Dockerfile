@@ -26,4 +26,5 @@ COPY --from=packages /build/node_modules ./node_modules
 COPY locales locales
 COPY --from=builder /build/dist ./
 
-CMD node --enable-source-maps index.js
+ENTRYPOINT ["node", "--enable-source-maps"]
+CMD ["index.js"]
