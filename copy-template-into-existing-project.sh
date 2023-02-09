@@ -11,8 +11,8 @@ name=$(basename "$PWD")
 templatedir="$(dirname "$0")"
 
 cp -r \
-    "$templatedir/"{package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile,install-systemd.sh} \
-    .
+	"$templatedir/"{package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile,install-systemd.sh} \
+	.
 
 cp "$templatedir/"telegram-typescript-bot-template.service "./$name.service"
 
