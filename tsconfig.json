@@ -6,6 +6,7 @@
 	"compilerOptions": {
 		"esModuleInterop": true,
 		"declaration": false,
+		"importsNotUsedAsValues": "error",
 		"sourceMap": true,
 		"outDir": "dist"
 	}
