@@ -11,15 +11,13 @@ name=$(basename "$PWD")
 templatedir="$(dirname "$0")"
 
 cp -r \
-	"$templatedir/"{package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile,install-systemd.sh} \
+	"$templatedir/"{package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile} \
 	.
-
-cp "$templatedir/"telegram-typescript-bot-template.service "./$name.service"
 
 echo "everything copied"
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
-sed -i "s/telegram-typescript-bot-template/$name/g" package.json Dockerfile .github/**/*.yml install-systemd.sh ./*.service
+sed -i "s/telegram-typescript-bot-template/$name/g" package.json Dockerfile .github/**/*.yml
 
 git --no-pager status --short
