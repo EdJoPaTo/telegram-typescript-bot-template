@@ -1,5 +1,4 @@
 import {createBackMainMenuButtons} from 'grammy-inline-menu';
-
 import type {MyContext} from '../my-context.js';
 
 export const backButtons = createBackMainMenuButtons<MyContext>(
