@@ -1,4 +1,4 @@
-import * as process from 'node:process';
+import {env} from 'node:process';
 import {Bot, session} from 'grammy';
 import {config as dotenv} from 'dotenv';
 import {FileAdapter} from '@grammyjs/storage-file';
@@ -11,7 +11,7 @@ import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
 dotenv(); // Load from .env file
-const token = process.env['BOT_TOKEN'];
+const token = env['BOT_TOKEN'];
 if (!token) {
 	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
 }
@@ -25,7 +25,7 @@ bot.use(session({
 
 bot.use(i18n.middleware());
 
-if (process.env['NODE_ENV'] !== 'production') {
+if (env['NODE_ENV'] !== 'production') {
 	// Show what telegram updates (messages, button clicks, ...) are happening (only in development)
 	bot.use(generateUpdateMiddleware());
 }
