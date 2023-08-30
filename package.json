@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "tsc --sourceMap && node --enable-source-maps dist/index.js",
+		"start": "tsc --sourceMap && node --enable-source-maps dist/telegram-typescript-bot-template.js",
 		"test": "tsc --sourceMap && xo && ava"
 	},
 	"type": "module",
