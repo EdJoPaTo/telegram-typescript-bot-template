@@ -9,7 +9,7 @@ jobs:
     name: Node.js
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       - uses: actions/checkout@v4
