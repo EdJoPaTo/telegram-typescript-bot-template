@@ -3,8 +3,8 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "tsc --sourceMap && node --enable-source-maps dist/telegram-typescript-bot-template.js",
-		"test": "tsc --sourceMap && xo && node --enable-source-maps --test"
+		"start": "tsc && node --enable-source-maps dist/telegram-typescript-bot-template.js",
+		"test": "tsc && xo && node --enable-source-maps --test"
 	},
 	"type": "module",
 	"engines": {
