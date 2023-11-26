@@ -1,6 +1,6 @@
-import test from 'ava';
+import {test} from 'node:test';
 import {fightDragons} from './magic.js';
 
-test('can battle the dragon', t => {
-	t.notThrows(() => fightDragons());
+await test('can battle the dragon', () => {
+	fightDragons();
 });
