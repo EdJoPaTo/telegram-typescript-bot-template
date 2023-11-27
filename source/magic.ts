@@ -3,7 +3,9 @@ export function feedTheDragons(): void {
 	// Like feeding dragons before you can fight them all day long.
 	console.log('Feed the dragons…');
 
-	console.log('Looks like they arnt hungry anymore. But somehow the poeple helping you transporting the food are gone too…');
+	console.log(
+		'Looks like they arnt hungry anymore. But somehow the poeple helping you transporting the food are gone too…',
+	);
 }
 
 export function fightDragons(): string {

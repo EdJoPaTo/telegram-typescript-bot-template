@@ -13,7 +13,9 @@ import type {MyContext, Session} from './my-context.js';
 dotenv(); // Load from .env file
 const token = env['BOT_TOKEN'];
 if (!token) {
-	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
+	throw new Error(
+		'You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)',
+	);
 }
 
 const bot = new Bot<MyContext>(token);
@@ -54,7 +56,10 @@ bot.command('html', async ctx => {
 
 const menuMiddleware = new MenuMiddleware('/', menu);
 bot.command('start', async ctx => menuMiddleware.replyToContext(ctx));
-bot.command('settings', async ctx => menuMiddleware.replyToContext(ctx, '/settings/'));
+bot.command(
+	'settings',
+	async ctx => menuMiddleware.replyToContext(ctx, '/settings/'),
+);
 bot.use(menuMiddleware.middleware());
 
 // False positive as bot is not a promise

@@ -3,7 +3,9 @@ import {backButtons} from '../general.js';
 import {getAvailableLocales} from '../../../translation.js';
 import type {MyContext} from '../../my-context.js';
 
-export const menu = new MenuTemplate<MyContext>(ctx => ctx.t('settings-language'));
+export const menu = new MenuTemplate<MyContext>(ctx =>
+	ctx.t('settings-language'),
+);
 
 menu.select('lang', getAvailableLocales, {
 	isSet: async (ctx, key) => await ctx.i18n.getLocale() === key,

@@ -3,7 +3,9 @@ import {backButtons} from '../general.js';
 import type {MyContext} from '../../my-context.js';
 import {menu as languageMenu} from './language.js';
 
-export const menu = new MenuTemplate<MyContext>(ctx => ctx.t('settings-body'));
+export const menu = new MenuTemplate<MyContext>(ctx =>
+	ctx.t('settings-body'),
+);
 
 menu.submenu(ctx => '🏳️‍🌈' + ctx.t('menu-language'), 'lang', languageMenu);
 
