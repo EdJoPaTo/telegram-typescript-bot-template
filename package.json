@@ -17,7 +17,7 @@
 		"grammy": "^1.10.0",
 		"grammy-inline-menu": "^8.0.0",
 		"telegraf-middleware-console-time": "^2.0.0",
-		"telegram-format": "^2.1.0"
+		"telegram-format": "^3.0.0"
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^5.0.0",
