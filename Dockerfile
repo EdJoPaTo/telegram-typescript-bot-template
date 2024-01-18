@@ -1,10 +1,8 @@
 FROM docker.io/library/node:20-alpine AS builder
 WORKDIR /build
-
-COPY package.json package-lock.json tsconfig.json ./
+COPY package.json package-lock.json ./
 RUN npm ci
-
-COPY source source
+COPY . ./
 RUN node_modules/.bin/tsc
 
 
