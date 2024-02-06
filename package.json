@@ -23,11 +23,12 @@
 		"@sindresorhus/tsconfig": "^5.0.0",
 		"@types/node": "^20.10.0",
 		"typescript": "^5.0.2",
-		"xo": "^0.56.0"
+		"xo": "^0.57.0"
 	},
 	"xo": {
 		"rules": {
-			"@typescript-eslint/naming-convention": "off"
+			"@typescript-eslint/naming-convention": "off",
+			"unicorn/prevent-abbreviations": "off"
 		}
 	}
 }
