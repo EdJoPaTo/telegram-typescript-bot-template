@@ -5,11 +5,11 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{yml,yaml}]
+# https://projectfluent.org/
+[*.ftl]
 indent_size = 2
 indent_style = space
 
-# https://projectfluent.org/
-[*.ftl]
+[*.{yml,yaml}]
 indent_size = 2
 indent_style = space
