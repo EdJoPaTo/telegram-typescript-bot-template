@@ -3,6 +3,7 @@ name: Build container
 on:
   push:
   pull_request:
+  workflow_dispatch:
   # Build regularly in order to have up to date base images in the edge image
   schedule:
     - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
