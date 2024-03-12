@@ -7,6 +7,8 @@ export const menu = new MenuTemplate<MyContext>(ctx =>
 	ctx.t('settings-body'),
 );
 
-menu.submenu(ctx => '🏳️‍🌈' + ctx.t('menu-language'), 'lang', languageMenu);
+menu.submenu('lang', languageMenu, {
+	text: ctx => '🏳️‍🌈' + ctx.t('menu-language'),
+});
 
 menu.manualRow(backButtons);

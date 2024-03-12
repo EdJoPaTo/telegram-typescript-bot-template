@@ -6,11 +6,19 @@ export const menu = new MenuTemplate<MyContext>(ctx =>
 	ctx.t('welcome', {name: ctx.from!.first_name}),
 );
 
-menu.url('Telegram API Documentation', 'https://core.telegram.org/bots/api');
-menu.url('grammY Documentation', 'https://grammy.dev/');
-menu.url(
-	'Inline Menu Documentation',
-	'https://github.com/EdJoPaTo/grammy-inline-menu',
-);
+menu.url({
+	text: 'Telegram API Documentation',
+	url: 'https://core.telegram.org/bots/api',
+});
+menu.url({
+	text: 'grammY Documentation',
+	url: 'https://grammy.dev/',
+});
+menu.url({
+	text: 'Inline Menu Documentation',
+	url: 'https://github.com/EdJoPaTo/grammy-inline-menu',
+});
 
-menu.submenu(ctx => '⚙️' + ctx.t('menu-settings'), 'settings', settingsMenu);
+menu.submenu('settings', settingsMenu, {
+	text: ctx => '⚙️' + ctx.t('menu-settings'),
+});

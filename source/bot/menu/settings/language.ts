@@ -7,7 +7,8 @@ export const menu = new MenuTemplate<MyContext>(ctx =>
 	ctx.t('settings-language'),
 );
 
-menu.select('lang', getAvailableLocales, {
+menu.select('lang', {
+	choices: getAvailableLocales,
 	isSet: async (ctx, key) => await ctx.i18n.getLocale() === key,
 	async set(ctx, key) {
 		await ctx.i18n.setLocale(key);
