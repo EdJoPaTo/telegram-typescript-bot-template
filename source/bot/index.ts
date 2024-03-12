@@ -1,12 +1,12 @@
 import {env} from 'node:process';
-import {Bot, session} from 'grammy';
-import {config as dotenv} from 'dotenv';
 import {FileAdapter} from '@grammyjs/storage-file';
+import {config as dotenv} from 'dotenv';
+import {Bot, session} from 'grammy';
+import {MenuMiddleware} from 'grammy-inline-menu';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
-import {MenuMiddleware} from 'grammy-inline-menu';
-import {i18n} from '../translation.js';
 import {danceWithFairies, fightDragons} from '../magic.js';
+import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
