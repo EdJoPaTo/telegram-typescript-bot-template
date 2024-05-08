@@ -1,18 +1,21 @@
 # Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     open-pull-requests-limit: 30
+    versioning-strategy: increase
     schedule:
       interval: "weekly"
       day: "saturday"
       time: "02:42" # UTC
-    versioning-strategy: increase-if-necessary
     commit-message:
       prefix: "build(npm):"
+    groups:
+      non-breaking:
+        update-types: ["minor", "patch"]
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
