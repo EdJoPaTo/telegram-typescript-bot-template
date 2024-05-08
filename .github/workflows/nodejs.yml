@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: 20
       - uses: actions/checkout@v4
-      - run: npm ci || npm install
+      - run: npm ci
       - run: npm test
