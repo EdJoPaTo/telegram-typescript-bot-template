@@ -12,7 +12,7 @@
 		"node": ">=20"
 	},
 	"dependencies": {
-		"@grammyjs/i18n": "^1.0.1",
+		"@grammyjs/i18n": "^1.0.2",
 		"@grammyjs/storage-file": "^2.0.0",
 		"dotenv": "^16.0.2",
 		"grammy": "^1.10.0",
