@@ -11,6 +11,10 @@ on:
   schedule:
     - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   packages: write
