@@ -6,13 +6,16 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     open-pull-requests-limit: 30
+    versioning-strategy: increase
     schedule:
       interval: "weekly"
       day: "saturday"
       time: "02:42" # UTC
-    versioning-strategy: increase-if-necessary
     commit-message:
       prefix: "build(npm):"
+    groups:
+      minor:
+        update-types: ["minor", "patch"]
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
