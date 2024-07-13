@@ -15,7 +15,7 @@
 		"@grammyjs/i18n": "^1.0.1",
 		"@grammyjs/storage-file": "^2.0.0",
 		"dotenv": "^16.0.2",
-		"grammy": "^1.26.1",
+		"grammy": "^1.27.0",
 		"grammy-inline-menu": "^9.0.2",
 		"telegraf-middleware-console-time": "^2.0.0",
 		"telegram-format": "^3.0.0"
