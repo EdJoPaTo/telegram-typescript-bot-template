@@ -12,7 +12,7 @@
 		"node": ">=20"
 	},
 	"dependencies": {
-		"@grammyjs/i18n": "^1.0.1",
+		"@grammyjs/i18n": "^1.1.2",
 		"@grammyjs/storage-file": "^2.0.0",
 		"dotenv": "^16.0.2",
 		"grammy": "^1.30.0",
@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^6.0.0",
-		"@types/node": "^20.16.5",
+		"@types/node": "^20.16.10",
 		"typescript": "^5.6.2",
 		"xo": "^0.59.3"
 	},
