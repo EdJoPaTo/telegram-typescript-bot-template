@@ -15,7 +15,7 @@
 		"@grammyjs/i18n": "^1.1.2",
 		"@grammyjs/storage-file": "^2.0.0",
 		"dotenv": "^16.0.2",
-		"grammy": "^1.31.3",
+		"grammy": "^1.32.0",
 		"grammy-inline-menu": "^9.2.0",
 		"telegraf-middleware-console-time": "^2.0.0",
 		"telegram-format": "^3.0.0"
@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^6.0.0",
 		"@types/node": "^20.17.6",
-		"typescript": "^5.6.3",
+		"typescript": "^5.7.2",
 		"xo": "^0.59.3"
 	},
 	"xo": {
