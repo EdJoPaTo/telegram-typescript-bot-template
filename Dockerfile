@@ -1,7 +1,7 @@
 FROM docker.io/library/node:20-alpine AS builder
 WORKDIR /build
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --no-audit --no-fund --no-update-notifier
 COPY . ./
 RUN node_modules/.bin/tsc
 
@@ -9,7 +9,7 @@ RUN node_modules/.bin/tsc
 FROM docker.io/library/node:20-alpine AS packages
 WORKDIR /build
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 
 
 FROM docker.io/library/node:20-alpine
