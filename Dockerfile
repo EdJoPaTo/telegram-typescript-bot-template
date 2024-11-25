@@ -14,7 +14,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 
 
-FROM docker.io/library/node:20-alpine
+FROM docker.io/library/node:20-alpine AS final
 RUN apk upgrade --no-cache
 
 WORKDIR /app
