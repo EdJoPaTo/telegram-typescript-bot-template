@@ -13,7 +13,6 @@ RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 
 
 FROM docker.io/library/node:20-alpine
-ENV NODE_ENV=production
 RUN apk upgrade --no-cache
 
 WORKDIR /app
