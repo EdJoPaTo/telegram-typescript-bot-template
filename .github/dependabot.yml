@@ -14,8 +14,8 @@ updates:
     commit-message:
       prefix: "build(npm):"
     groups:
-      non-breaking:
-        update-types: ["minor", "patch"]
+      patches:
+        update-types: ["patch"]
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
