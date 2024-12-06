@@ -9,7 +9,7 @@
 	},
 	"type": "module",
 	"engines": {
-		"node": ">=20"
+		"node": ">=22"
 	},
 	"dependencies": {
 		"@grammyjs/i18n": "^1.1.2",
@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^7.0.0",
-		"@types/node": "^20.17.9",
+		"@types/node": "^22.10.1",
 		"typescript": "^5.7.2",
 		"xo": "^0.59.3"
 	},
