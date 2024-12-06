@@ -14,8 +14,9 @@ COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 
 
-FROM docker.io/library/node:22-alpine AS final
-RUN apk upgrade --no-cache
+FROM docker.io/library/alpine:3.21 AS final
+RUN apk upgrade --no-cache \
+	&& apk add --no-cache nodejs
 
 WORKDIR /app
 VOLUME /app/persist
