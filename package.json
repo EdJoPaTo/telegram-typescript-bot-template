@@ -22,8 +22,8 @@
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^7.0.0",
-		"@types/node": "^22.10.5",
-		"typescript": "^5.7.2",
+		"@types/node": "^22.10.6",
+		"typescript": "^5.7.3",
 		"xo": "^0.60.0"
 	},
 	"xo": {
