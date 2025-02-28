@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.19.76",
-		"typescript": "^5.7.3",
+		"typescript": "^5.8.2",
 		"xo": "^0.60.0"
 	},
 	"xo": {

@@ -1,8 +1,10 @@
 {
 	"compilerOptions": {
 		"declaration": false,
+		"erasableSyntaxOnly": true,
 		"forceConsistentCasingInFileNames": true,
-		"module": "node16",
+		"libReplacement": false,
+		"module": "node18",
 		"moduleDetection": "force",
 		"noEmitOnError": true,
 		"noFallthroughCasesInSwitch": true,
