@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@grammyjs/i18n": "^1.1.2",
-		"@grammyjs/storage-file": "^2.0.0",
+		"@grammyjs/storage-file": "^2.5.1",
 		"dotenv": "^16.0.2",
 		"grammy": "^1.35.0",
 		"grammy-inline-menu": "^9.2.0",
