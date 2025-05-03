@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@grammyjs/i18n": "^1.1.2",
 		"@grammyjs/storage-file": "^2.5.1",
-		"dotenv": "^16.0.2",
+		"dotenv": "^16.5.0",
 		"grammy": "^1.35.1",
 		"grammy-inline-menu": "^9.2.0",
 		"telegraf-middleware-console-time": "^3.0.0",
