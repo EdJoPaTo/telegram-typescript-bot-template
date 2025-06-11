@@ -20,7 +20,7 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "es2022", // Node.js 18
+		"target": "es2024", // Node.js 22
 		"verbatimModuleSyntax": true
 	}
 }
