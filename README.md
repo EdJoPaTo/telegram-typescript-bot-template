@@ -20,7 +20,7 @@ npm install
 
 Write to the @BotFather on Telegram and create your bot.
 You will get a token that looks like this: `123:abc`.
-Use it as an environment variable (for example via `.env` file or `export BOT_TOKEN=123:abc`).
+Use it as an environment variable (for example via `export BOT_TOKEN=123:abc`).
 Tip: When you create a separate bot for your development you can use production and development in parallel.
 
 The bot stores persistent data within the `persist` folder.

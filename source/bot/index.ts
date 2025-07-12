@@ -1,6 +1,5 @@
 import {env} from 'node:process';
 import {FileAdapter} from '@grammyjs/storage-file';
-import {config as dotenv} from 'dotenv';
 import {Bot, session} from 'grammy';
 import {MenuMiddleware} from 'grammy-inline-menu';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
@@ -10,7 +9,6 @@ import {i18n} from '../translation.js';
 import {menu} from './menu/index.js';
 import type {MyContext, Session} from './my-context.js';
 
-dotenv(); // Load from .env file
 const token = env['BOT_TOKEN'];
 if (!token) {
 	throw new Error(
