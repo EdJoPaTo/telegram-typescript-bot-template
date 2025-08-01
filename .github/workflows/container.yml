@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   # Build regularly in order to have up to date base image in the edge image
   schedule:
-    - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
+    - cron: "42 2 * * 6" # weekly on Saturday 2:42 UTC
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
