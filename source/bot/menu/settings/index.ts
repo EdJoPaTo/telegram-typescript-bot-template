@@ -1,7 +1,7 @@
 import {MenuTemplate} from 'grammy-inline-menu';
-import type {MyContext} from '../../my-context.js';
-import {backButtons} from '../general.js';
-import {menu as languageMenu} from './language.js';
+import type {MyContext} from '../../my-context.ts';
+import {backButtons} from '../general.ts';
+import {menu as languageMenu} from './language.ts';
 
 export const menu = new MenuTemplate<MyContext>(ctx =>
 	ctx.t('settings-body'));

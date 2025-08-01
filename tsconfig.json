@@ -17,6 +17,7 @@
 		"noUnusedParameters": true,
 		"outDir": "dist",
 		"removeComments": true,
+		"rewriteRelativeImportExtensions": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,

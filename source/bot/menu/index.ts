@@ -1,6 +1,6 @@
 import {MenuTemplate} from 'grammy-inline-menu';
-import type {MyContext} from '../my-context.js';
-import {menu as settingsMenu} from './settings/index.js';
+import type {MyContext} from '../my-context.ts';
+import {menu as settingsMenu} from './settings/index.ts';
 
 export const menu = new MenuTemplate<MyContext>(ctx =>
 	ctx.t('welcome', {name: ctx.from!.first_name}));

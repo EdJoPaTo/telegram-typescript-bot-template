@@ -4,10 +4,10 @@ import {Bot, session} from 'grammy';
 import {MenuMiddleware} from 'grammy-inline-menu';
 import {generateUpdateMiddleware} from 'telegraf-middleware-console-time';
 import {html as format} from 'telegram-format';
-import {danceWithFairies, fightDragons} from '../magic.js';
-import {i18n} from '../translation.js';
-import {menu} from './menu/index.js';
-import type {MyContext, Session} from './my-context.js';
+import {danceWithFairies, fightDragons} from '../magic.ts';
+import {i18n} from '../translation.ts';
+import {menu} from './menu/index.ts';
+import type {MyContext, Session} from './my-context.ts';
 
 const token = env['BOT_TOKEN'];
 if (!token) {
