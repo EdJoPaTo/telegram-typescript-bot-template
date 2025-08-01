@@ -4,7 +4,7 @@
 		"erasableSyntaxOnly": true,
 		"forceConsistentCasingInFileNames": true,
 		"libReplacement": false,
-		"module": "node18",
+		"module": "node20",
 		"moduleDetection": "force",
 		"noEmitOnError": true,
 		"noFallthroughCasesInSwitch": true,
