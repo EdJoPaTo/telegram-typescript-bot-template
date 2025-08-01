@@ -11,9 +11,7 @@ import type {MyContext, Session} from './my-context.js';
 
 const token = env['BOT_TOKEN'];
 if (!token) {
-	throw new Error(
-		'You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)',
-	);
+	throw new Error('You have to provide the bot-token from @BotFather via environment variable (BOT_TOKEN)');
 }
 
 const bot = new Bot<MyContext>(token);

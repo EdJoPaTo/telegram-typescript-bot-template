@@ -4,8 +4,7 @@ import type {MyContext} from '../../my-context.js';
 import {backButtons} from '../general.js';
 
 export const menu = new MenuTemplate<MyContext>(ctx =>
-	ctx.t('settings-language'),
-);
+	ctx.t('settings-language'));
 
 menu.select('lang', {
 	choices: getAvailableLocales,
