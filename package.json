@@ -20,7 +20,7 @@
 		"telegram-format": "^3.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.31",
+		"@types/node": "^22.17.1",
 		"typescript": "^5.9.2",
 		"xo": "^1.2.1"
 	},
