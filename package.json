@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "tsc && node --enable-source-maps dist/telegram-typescript-bot-template.js",
+		"start": "tsc && node --env-file-if-exists=.env --enable-source-maps dist/telegram-typescript-bot-template.js",
 		"test": "tsc && xo && node --enable-source-maps --test"
 	},
 	"type": "module",
