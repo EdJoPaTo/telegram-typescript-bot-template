@@ -11,6 +11,11 @@
 	"engines": {
 		"node": ">=22"
 	},
+	"devEngines": {
+		"packageManager": {
+			"name": "npm"
+		}
+	},
 	"dependencies": {
 		"@grammyjs/i18n": "^1.1.2",
 		"@grammyjs/storage-file": "^2.5.1",
