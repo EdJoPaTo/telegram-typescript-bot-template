@@ -4,12 +4,12 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "tsc && node --env-file-if-exists=.env --enable-source-maps dist/telegram-typescript-bot-template.js",
+		"start": "node --env-file-if-exists=.env --enable-source-maps source/telegram-typescript-bot-template.ts",
 		"test": "tsc && xo && node --enable-source-maps --test"
 	},
 	"type": "module",
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
 	"devEngines": {
 		"packageManager": {
@@ -25,7 +25,7 @@
 		"telegram-format": "^3.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^22.18.9",
+		"@types/node": "^24.10.1",
 		"typescript": "^5.9.2",
 		"xo": "^1.2.3"
 	},

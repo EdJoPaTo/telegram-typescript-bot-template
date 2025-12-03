@@ -6,6 +6,7 @@
 		"libReplacement": false,
 		"module": "node20",
 		"moduleDetection": "force",
+		"noEmit": true,
 		"noEmitOnError": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
