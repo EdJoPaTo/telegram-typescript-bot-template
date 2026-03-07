@@ -37,3 +37,8 @@ updates:
       time: "02:42" # UTC
     commit-message:
       prefix: "ci(actions):"
+    groups:
+      actions:
+        patterns: ["actions/*"]
+      docker:
+        patterns: ["docker/*"]
