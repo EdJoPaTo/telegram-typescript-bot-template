@@ -23,6 +23,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"target": "es2024", // Node.js 22
+		"types": ["node"],
 		"verbatimModuleSyntax": true
 	}
 }
