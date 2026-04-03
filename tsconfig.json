@@ -1,27 +1,18 @@
 {
 	"compilerOptions": {
-		"declaration": false,
 		"erasableSyntaxOnly": true,
-		"forceConsistentCasingInFileNames": true,
-		"libReplacement": false,
 		"module": "node20",
 		"moduleDetection": "force",
 		"noEmit": true,
-		"noEmitOnError": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"noUncheckedIndexedAccess": true,
-		"noUncheckedSideEffectImports": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "dist",
-		"removeComments": true,
 		"rewriteRelativeImportExtensions": true,
 		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
 		"target": "es2024", // Node.js 22
 		"types": ["node"],
 		"verbatimModuleSyntax": true
