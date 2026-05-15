@@ -9,8 +9,8 @@ RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 FROM docker.io/library/alpine:3.23 AS final
 RUN apk upgrade --no-cache \
 	&& apk add --no-cache nodejs \
-	&& addgroup -g 1234 runner \
-	&& adduser -D -u 1234 -G runner runner \
+	&& addgroup -S -g 923 runner \
+	&& adduser -S -D -u 923 -G runner runner \
 	&& rm -f -- /etc/*-
 
 WORKDIR /app
