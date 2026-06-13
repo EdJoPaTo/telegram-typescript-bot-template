@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.23 AS packages
+FROM docker.io/library/alpine:3.24 AS packages
 RUN apk upgrade --no-cache \
 	&& apk add --no-cache npm
 WORKDIR /build
@@ -6,7 +6,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund --no-update-notifier --omit=dev
 
 
-FROM docker.io/library/alpine:3.23 AS final
+FROM docker.io/library/alpine:3.24 AS final
 RUN apk upgrade --no-cache \
 	&& apk add --no-cache nodejs \
 	&& addgroup -S -g 923 runner \
