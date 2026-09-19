@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"@types/node": "^24.10.1",
 		"typescript": "^6.0.2",
-		"xo": "^1.2.3"
+		"xo": "^4.0.0"
 	},
 	"xo": {
 		"rules": {
