@@ -1,5 +1,5 @@
-import {start as startBot} from './bot/index.ts';
-import {feedTheDragons} from './magic.ts';
+import { start as startBot } from "./bot/index.ts";
+import { feedTheDragons } from "./magic.ts";
 
 feedTheDragons();
 

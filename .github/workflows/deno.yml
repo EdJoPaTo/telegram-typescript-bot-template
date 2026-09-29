@@ -1,0 +1,31 @@
+name: Deno
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  denofmt-and-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - uses: actions/checkout@v7
+
+      - run: deno lint
+      - run: deno fmt --check
+
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - uses: actions/checkout@v7
+
+      - run: npm ci
+      - run: deno check ./**/*.ts

@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "node --env-file-if-exists=.env --enable-source-maps source/telegram-typescript-bot-template.ts",
-		"test": "tsc && xo && node --enable-source-maps --test"
+		"test": "tsc && node --enable-source-maps --test"
 	},
 	"type": "module",
 	"engines": {
@@ -26,13 +26,6 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
-		"typescript": "^6.0.2",
-		"xo": "^1.2.3"
-	},
-	"xo": {
-		"rules": {
-			"@typescript-eslint/naming-convention": "off",
-			"unicorn/prevent-abbreviations": "off"
-		}
+		"typescript": "^6.0.2"
 	}
 }

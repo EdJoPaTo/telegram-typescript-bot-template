@@ -1,5 +1,6 @@
 .env
-dist
+coverage
+docs
 node_modules
 
 # botfiles

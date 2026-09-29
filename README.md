@@ -55,7 +55,6 @@ Make sure to explicitly use that volume (for example, make sure it's synced or t
     - `menu` may contain specifics about the bot, the menu that is shown on /start
   - `magic` may contain something relevant for doing magic. It is not relevant to the bot directly, but it is used by it.
 - `locales` contains translation strings for your bot. That way it can speak multiple languages.
-- `dist` will contain transpiled JavaScript files.
 - `persist` will contain persistent data your bot uses. Make sure to keep that data persistent (Backups for example).
 
 ## Improve
