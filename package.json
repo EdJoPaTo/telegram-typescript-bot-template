@@ -1,20 +1,11 @@
 {
 	"name": "telegram-typescript-bot-template",
 	"private": true,
-	"version": "0.0.0",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"start": "node --env-file-if-exists=.env --enable-source-maps source/telegram-typescript-bot-template.ts",
-		"test": "tsc && node --enable-source-maps --test"
-	},
-	"type": "module",
-	"engines": {
-		"node": ">=24"
-	},
-	"devEngines": {
-		"packageManager": {
-			"name": "npm"
-		}
+		"test": "tsc && oxlint && oxfmt --check && node --enable-source-maps --test"
 	},
 	"dependencies": {
 		"@grammyjs/i18n": "^1.1.2",
@@ -26,6 +17,17 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
-		"typescript": "^6.0.2"
+		"oxfmt": "^0.72.0",
+		"oxlint": "^1.87.0",
+		"oxlint-tsgolint": "^7.0.2004",
+		"typescript": "^7.0.2"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "npm"
+		}
+	},
+	"engines": {
+		"node": ">=24"
 	}
 }

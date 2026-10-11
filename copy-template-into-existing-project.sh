@@ -13,8 +13,9 @@ name=$(basename "$PWD")
 templatedir="$(dirname "$0")"
 
 cp -r \
-	"$templatedir/"{package.json,deno.jsonc,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile} \
+	"$templatedir/"{package.json,tsconfig.json,.editorconfig,.ox*rc.json,.gitattributes,.github,.gitignore,.dockerignore,Dockerfile} \
 	.
+rm -f deno.jsonc deno.lock .github/workflows/deno.yml
 
 echo "everything copied"
 
