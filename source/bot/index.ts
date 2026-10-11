@@ -1,9 +1,11 @@
 import { env } from "node:process";
+
 import { FileAdapter } from "@grammyjs/storage-file";
 import { Bot, session } from "grammy";
 import { MenuMiddleware } from "grammy-inline-menu";
 import { generateUpdateMiddleware } from "telegraf-middleware-console-time";
 import { html as format } from "telegram-format";
+
 import { danceWithFairies, fightDragons } from "../magic.ts";
 import { i18n } from "../translation.ts";
 import { menu } from "./menu/index.ts";
@@ -18,10 +20,12 @@ if (!token) {
 
 const bot = new Bot<MyContext>(token);
 
-bot.use(session({
-	initial: (): Session => ({}),
-	storage: new FileAdapter(),
-}));
+bot.use(
+	session({
+		initial: (): Session => ({}),
+		storage: new FileAdapter(),
+	}),
+);
 
 bot.use(i18n.middleware());
 
@@ -54,10 +58,7 @@ bot.command("html", async (ctx) => {
 
 const menuMiddleware = new MenuMiddleware("/", menu);
 bot.command("start", (ctx) => menuMiddleware.replyToContext(ctx));
-bot.command(
-	"settings",
-	(ctx) => menuMiddleware.replyToContext(ctx, "/settings/"),
-);
+bot.command("settings", (ctx) => menuMiddleware.replyToContext(ctx, "/settings/"));
 bot.use(menuMiddleware.middleware());
 
 // False positive as bot is not a promise
