@@ -7,18 +7,31 @@
 		"pedantic": "error",
 		"perf": "error"
 	},
-	"rules": {
-		"func-style": ["error", "declaration"],
-		"no-warning-comments": "warn",
-		"typescript/prefer-nullish-coalescing": ["error", { "ignorePrimitives": { "string": true } }],
-		"typescript/prefer-readonly-parameter-types": ["error", { "ignoreInferredTypes": true }],
-		"typescript/strict-boolean-expressions": ["error", { "allowNullableString": true }]
-	},
 	"env": {
 		"builtin": true
 	},
 	"options": {
 		"reportUnusedDisableDirectives": "error",
 		"typeAware": true
-	}
+	},
+	"rules": {
+		"func-style": ["error", "declaration"],
+		"no-warning-comments": "warn",
+		"typescript/prefer-nullish-coalescing": ["error", { "ignorePrimitives": { "string": true } }],
+		"typescript/prefer-readonly-parameter-types": ["error", { "ignoreInferredTypes": true }],
+		"typescript/strict-boolean-expressions": [
+			"error",
+			{
+				"allowNullableBoolean": true,
+				"allowNullableString": true,
+				"allowString": true
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["**/*.test.*", "**/test.*"],
+			"rules": { "typescript/prefer-readonly-parameter-types": "allow" }
+		}
+	]
 }
