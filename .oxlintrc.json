@@ -1,6 +1,6 @@
 {
 	"$schema": "./node_modules/oxlint/configuration_schema.json",
-	"plugins": ["import", "jsdoc", "node", "oxc", "promise", "typescript", "unicorn"],
+	"plugins": ["import", "node", "oxc", "promise", "typescript", "unicorn"],
 	"categories": {
 		"correctness": "error",
 		"suspicious": "error",
@@ -16,7 +16,10 @@
 	},
 	"rules": {
 		"func-style": ["error", "declaration"],
+		"import/no-duplicates": ["error", { "preferInline": true }],
 		"no-warning-comments": "warn",
+		"typescript/array-type": ["error", { "default": "array-simple" }],
+		"typescript/no-import-type-side-effects": "error",
 		"typescript/prefer-nullish-coalescing": ["error", { "ignorePrimitives": { "string": true } }],
 		"typescript/prefer-readonly-parameter-types": ["error", { "ignoreInferredTypes": true }],
 		"typescript/strict-boolean-expressions": [
@@ -26,7 +29,8 @@
 				"allowNullableString": true,
 				"allowString": true
 			}
-		]
+		],
+		"unicorn/prefer-node-protocol": "error"
 	},
 	"overrides": [
 		{
