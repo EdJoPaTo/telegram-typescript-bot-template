@@ -17,9 +17,9 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
-		"oxfmt": "^0.72.0",
-		"oxlint": "^1.87.0",
-		"oxlint-tsgolint": "^7.0.2004",
+		"oxfmt": "^0.75.0",
+		"oxlint": "^1.90.0",
+		"oxlint-tsgolint": "^7.0.2005",
 		"typescript": "^7.0.2"
 	},
 	"devEngines": {
