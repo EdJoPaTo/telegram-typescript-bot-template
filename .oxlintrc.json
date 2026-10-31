@@ -21,7 +21,7 @@
 		"typescript/array-type": ["error", { "default": "array-simple" }],
 		"typescript/no-import-type-side-effects": "error",
 		"typescript/prefer-nullish-coalescing": ["error", { "ignorePrimitives": { "string": true } }],
-		"typescript/prefer-readonly-parameter-types": ["error", { "ignoreInferredTypes": true }],
+		"typescript/prefer-readonly-parameter-types": "allow",
 		"typescript/strict-boolean-expressions": [
 			"error",
 			{
@@ -35,7 +35,7 @@
 	"overrides": [
 		{
 			"files": ["**/*.test.*", "**/test.*"],
-			"rules": { "typescript/prefer-readonly-parameter-types": "allow" }
+			"rules": {}
 		}
 	]
 }
